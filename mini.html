@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eef0f5;
+    }
+
+    .box {
+        width: 400px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .row {
+        display: flex;
+        gap: 10px;
+    }
+
+    input,
+    select {
+        padding: 15px;
+        font-size: 25px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 25px 0;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .result {
+        border: 1px dashed #ccc;
+        padding: 20px;
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #answer {
+        color: green;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Mini Calculator</h1>
+
+        <div class="row">
+            <input type="number" id="num1" value="45">
+
+            <select id="operator">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+
+            <input type="number" id="num2" value="45">
+        </div>
+
+        <button onclick="calc()">Calculate Amount</button>
+
+        <div class="result">
+            <span>Result:</span>
+            <span id="answer">0</span>
+        </div>
+    </div>
+
+    <script>
+        function calc() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let operator = document.getElementById("operator").value;
+            let result;
+
+            if (operator == "+") {
+                result = num1 + num2;
+            } else if (operator == "-") {
+                result = num1 - num2;
+            } else if (operator == "*") {
+                result = num1 * num2;
+            } else if (operator == "/") {
+                result = num1 / num2;
+            }
+
+            document.getElementById("answer").innerText = result.toFixed(2);
+        }
+
+        calc(); 
+    </script>
+
+</body>
+
+</html>
