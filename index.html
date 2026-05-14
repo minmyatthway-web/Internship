@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="TREE.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>htmljs</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <section> <h1>Update Variables</h1>
-            <p>Name (String):</p>
-            <input type="text">
-            <p>Age (Number):</p>
-            <input type="number">
-            <p>VIP Stauts (Boolean):</p>
-            <input type="checkbox" checked>
-            <p>Card Color:</p>
-            <input type="color">
-            
-        </section>
-        <section>
-            
-            <h1>Live DOM Output</h1>
-           <div class="card">
-            <div>
-                <p>674224343535</p>
 
+<body>
+    <div class="mx-auto w-1/2 p-4 bg-gray-300 shadow-md rounded-lg mt-10 flex justify-around gap-1">
+        <div class="flex-col-2">
+            <p class="text-4xl text-blue-600">Update Variables</p>
+            <div class="flex flex-col gap- mt-4">
+                <label for="Name">Name(String):</label>
+                <div>
+                    <input type="text" id="Name" name="Name">
+                </div>
+
+                <label for="Age">Age(Number):</label>
+                <div>
+                    <input type="number" id="Age" name="Age">
+                </div>
+
+                <label for="Boolean">VIP Stautus(Boolean):</label>
+                <div>
+                    <input type="checkbox" id="Boolean" name="Boolean">
+                </div>
+                <label for="Color" name="Color">Card Color:</label>
+                <div>
+                    <input type="color" id="Color" name="Color">
+                </div>
             </div>
-            <div>
+
+        </div>
+        <div class="flex-col-2 ">
+            <p class="text-4xl text-blue-600">Live DOM Output</p>
+            <div class="w-[160px] bg-blue-300 rounded-lg p-4 mt-10 p-4">
+                <p>648384885387</p>
                 <p>Age: 15</p>
             </div>
-           </div>
-        </section>
-        
-        
-    
-     </div>
-       
+        </div>
+
+    </div>
+
+
 </body>
+
 </html>
